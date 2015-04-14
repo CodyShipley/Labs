@@ -34,10 +34,15 @@ namespace ClassBuilding
             get { return _price; }
             set
             {
-                
+
                 _price = value < 0 ? 0 : value;
-             
+
             }
+        }
+
+        public decimal CalculateTax(decimal taxRate)
+        {
+            return this.Price * taxRate;
         }
 
 
